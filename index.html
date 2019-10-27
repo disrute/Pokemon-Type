@@ -16,19 +16,20 @@
     <div class="container mx-auto text-center" style="width: 80vw">
         <h1>Pokémon Type Fetcher</h1>
 
-        <h2>type placeholder</h2>
+        <h2 id="displayType">type placeholder</h2>
 
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1"></label>
-                <input type="search" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="search" class="form-control" id="getType"
                     placeholder="enter a pokémon name">
                 <small id="emailHelp" class="form-text text-muted">search for a pokémon and receive it's type</small>
             </div>
+            <button type="button" class="btn btn-primary" id="fetchBtn">Fetch!</button>
         </form>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
