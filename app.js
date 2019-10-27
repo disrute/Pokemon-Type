@@ -1,5 +1,6 @@
 //const typeOutput = document.getElementById('displayType');
 const typeInput = document.getElementById('getType');
+const showPokemon = document.getElementById('showPokemon');
 const url = 'https://pokeapi.co/api/v2/pokemon/';
 
 document.getElementById('fetchBtn').addEventListener('click', () => {
@@ -16,6 +17,8 @@ document.getElementById('fetchBtn').addEventListener('click', () => {
             document.getElementById('displayType').innerText = response.types[0].type.name;
             // update text in h2 to display pokemon type
 
+            // display image.
+            showPokemon.src = xhr.response.sprites.front_default;
         }
     };
 
