@@ -13,8 +13,14 @@ document.getElementById('fetchBtn').addEventListener('click', () => {
 
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
-            let response = xhr.response;
-            document.getElementById('displayType').innerText = response.types[0].type.name;
+            let pokeType = xhr.response.types;
+            let typeString = '';
+            for (let obj of pokeType) {
+                typeString = typeString + obj.type.name;
+            };
+
+            //document.getElementById('displayType').innerText = response.types[0].type.name;
+            document.getElementById('displayType').innerText = `${pokemonToFind} type is: ${typeString}`;
             // update text in h2 to display pokemon type
 
             // display image.
