@@ -6,7 +6,7 @@ const url = 'https://pokeapi.co/api/v2/pokemon/';
 document.getElementById('fetchBtn').addEventListener('click', () => {
 
     // grab input (search query):
-    let pokemonToFind = typeInput.value;
+    let pokemonToFind = typeInput.value.toLowerCase();
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
