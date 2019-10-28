@@ -12,6 +12,9 @@ document.getElementById('fetchBtn').addEventListener('click', () => {
     xhr.responseType = 'json';
 
     xhr.onreadystatechange = () => {
+        if (xhr.status >= 400) {
+            document.getElementById('displayType').innerText = 'Pokémon not found, try another name';
+        };
         if (xhr.readyState === XMLHttpRequest.DONE) {
             let pokeType = xhr.response.types;
             let typeString = '';
